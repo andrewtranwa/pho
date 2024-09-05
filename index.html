@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What A Pho</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>What A Pho</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#info">Contact Us</a></li>
+                <li><a href="#menu">Menus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <img src="whatapho.png" alt="What A Pho Restaurant">
+        <div id="overlay">
+            <div id="weather">Loading weather...</div>
+            <div id="dish">Loading recommendation...</div>
+            <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520" target="_blank">
+                <button id="order-online">Order Online</button>
+            </a>
+        </div>
+    </section>
+
+    <section id="info">
+        <h2>Contact Us</h2>
+        <p class="contact"><strong>Phone:</strong> 360 933 4182</p>
+        <a href="https://www.google.com/maps/dir//3212+Northwest+Ave,+Bellingham,+WA+98225/@48.7751836,-122.5787091,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x5485a30488d72d9d:0xacb7d71e90fcd66c!2m2!1d-122.4962803!2d48.7752236?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            <p class="contact"><strong>Address:</strong> 3212 Northwest Ave, Bellingham, WA 98225</p>
+        </a>
+        <p class="contact"><strong>Hours:</strong> Monday - Saturday: 11 am - 8 pm</p>
+    </section>
+    
+
+    <section id="menu">
+        <h2>Our Full Menu</h2>
+        <nav>
+            <ul>
+                <li onclick="showMenu('pho')">Phở</li>
+                <li onclick="showMenu('soups')">Soups</li>
+                <li onclick="showMenu('rice')">Rice Dishes</li>
+                <li onclick="showMenu('noodles')">Noodles</li>
+                <li onclick="showMenu('banhmi')">Banh Mi</li>
+                <li onclick="showMenu('rolls')">Rolls</li>
+                <li onclick="showMenu('banhxeo')">Banh Xeo</li>
+                <li onclick="showMenu('sides')">Sides</li>
+                <li onclick="showMenu('drinks')">Drinks</li>
+            </ul>
+        </nav>
+        <div id="menuContent">
+            <div id="pho" class="menu-category" style="display: none;">
+                <h3>Phở</h3>
+
+                <p class="food" onclick="toggleDescription('pho-beef-desc')">Beef</p>
+                <div id="pho-beef-desc" class="description" style="display: none;">
+                    <p>Rich and flavorful broth with tender slices of beef, served with rice noodles and herbs.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746424" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('pho-chicken-desc')">Chicken</p>
+                <div id="pho-chicken-desc" class="description" style="display: none;">
+                    <p>Delicious chicken broth with rice noodles, topped with seasoned chicken pieces and fresh herbs.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746336" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+                
+                <p class="food" onclick="toggleDescription('pho-veggie-desc')">Veggie</p>
+                <div id="pho-veggie-desc" class="description" style="display: none;">
+                    <p>A hearty vegetable broth filled with rice noodles and a variety of fresh garden vegetables.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746344" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+            </div>
+            <div id="soups" class="menu-category" style="display: none;">
+                <h3>Soups</h3>
+
+                <p class="food" onclick="toggleDescription('soup-bunbohue-desc')">Bun Bo Hue (Spicy Beef Noodle Soup)</p>
+                <div id="soup-bunbohue-desc" class="description" style="display: none;">
+                    <p>Soup with flavorful beef broth (can be spicy) vermicelli noodle, and various ingredients includes beet slices, beef meat ball & special herbs.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746400" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('soup-hutieu-desc')">Hu Tieu (Vietnamese Noodle Soup)</p>
+                <div id="soup-hutieu-desc" class="description" style="display: none;">
+                    <p>Clear and fragrant broth paired with translucent rice noodles includes a medley of succulent proteins like pork & shrimp. Garnished with fresh herbs. </p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746352" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('soup-wonton-desc')">Wonton Soup</p>
+                <div id="soup-wonton-desc" class="description" style="display: none;">
+                    <p>The wontons are stuffed with a mixture of pork, cabbage, and seasoned properly. Served with delightful soup and greens.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746368" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+            </div>
+            <div id="rice" class="menu-category" style="display: none;">
+                <h3>Rice Dishes</h3>
+
+                <p class="food" onclick="toggleDescription('rice-comthitnuong-desc')">Com Thit Nuong</p>
+                <div id="rice-comthitnuong-desc" class="description" style="display: none;">
+                    <p>Dish includes grilled pork served over steamed rice. Garnished with pickled veggies, tomato, cucumber, lettuce, and a zesty dipping sauce. </p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746360" target="_blank"> <!-- grubhub website doesn't work -->
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('rice-comgacurry-desc')">Com Ga Curry</p>
+                <div id="rice-comgacurry-desc" class="description" style="display: none;">
+                    <p>Tender chicken and onions cooked in a rich and aromatic yellow curry sauce. Served with steamed rice.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746328" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('rice-comgateriyaki-desc')">Com Ga Teriyaki</p>
+                <div id="rice-comgateriyaki-desc" class="description" style="display: none;">
+                    <p>TTender grilled chicken glazed with a glossy teriyaki sauce. This savory sweet creating is complemented by a medley of vegetables (bell peppers and onions). Served with steamed rice. </p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746432" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+            </div>
+            <div id="noodles" class="menu-category" style="display: none;">
+                <h3>Noodles</h3>
+
+                <p class="food" onclick="toggleDescription('noodles-chickenpadthai-desc')">Chicken Pad Thai</p>
+                <div id="noodles-chickenpadthai-desc" class="description" style="display: none;">
+                    <p>Stir fried rice noodles includes a delightful combination of chicken & savory sweet tamarind based cause either a side of fresh greens.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746384" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('noodles-shrimppadthai-desc')">Shrimp Pad Thai</p>
+                <div id="noodles-shrimppadthai-desc" class="description" style="display: none;">
+                    <p>Stir fried rice noodles includes a delightful combination of Shrimp & savory sweet tamarind based cause either a side of fresh greens.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746392" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('noodles-bunthitnuong-desc')">Bun Thit Nuong</p>
+                <div id="noodles-bunthitnuong-desc" class="description" style="display: none;">
+                    <p>Dish includes grilled pork served over vermicelli noodles without egg rolls. Garnished with pickled veggies, tomato, cucumber, lettuce, and a zesty dipping sauce. </p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746448" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+            </div>
+            <div id="banhmi" class="menu-category" style="display: none;">
+                <h3>Banh Mi</h3>
+
+                <p class="food" onclick="toggleDescription('banhmi-pork-desc')">Grilled Pork Banh Mi</p>
+                <div id="banhmi-pork-desc" class="description" style="display: none;">
+                    <p>Crunchy baguette sandwich with pate, grilled pork, pickled vegetables, cucumbers, cilantro, jalapeño, and a flavorful spread.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746376" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('banhmi-chicken-desc')">Grilled Chicken Banh Mi</p>
+                <div id="banhmi-chicken-desc" class="description" style="display: none;">
+                    <p>Crunchy baguette sandwich with pate, grilled chicken, pickled vegetables, cucumbers, cilantro, jalapeño, and a flavorful spread.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746440" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+
+            </div>
+            <div id="rolls" class="menu-category" style="display: none;">
+                <h3>Rolls</h3>
+
+                <p class="food" onclick="toggleDescription('rolls-goicuon-desc')">Goi Cuon</p>
+                <div id="rolls-goicuon-desc" class="description" style="display: none;">
+                    <p>Rice paper rolls enclosed in a medley of fresh shrimp, pork, herbs, vermicelli, and a tasty dipping sauce.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746416" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('rolls-chagio-desc')">Cha Gio</p>
+                <div id='rolls-chagio-desc' class="description" style="display: none;">
+                    <p>Rice paper rolls enclosed in a medley of fresh shrimp, pork, herbs, vermicelli, and a tasty dipping sauce.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746320" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+            <div id="banhxeo" class="menu-category" style="display: none;">
+                <h3>Snacks</h3>
+
+
+                <p class="food" onclick="toggleDescription('banhxeo-banhxeo-desc')">Banh Xeo</p>
+                <div id="banhxeo-banhxeo-desc" class="description" style="display: none;">
+                    <p>Savory rice egg pancake filled with a mixture of shrimp. pork, bean sprouts, and onions. Crispy on the outside and tender within. Includes fresh lettuce leaves for wrapping and dipping sauce on the side. </p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746408" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+            </div>
+            <div id="sides" class="menu-category" style="display: none;">
+                <h3>Sides</h3>
+
+
+                <p class="food" onclick="toggleDescription('sides-wonton-desc')">Fried Wontons</p>
+                <div id="sides-wonton-desc" class="description" style="display: none;">
+                    <p> Crunchy deep fried wontons filled with pork and cabbage. Served with delicious sauce.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268020746312" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+
+                </div>
+            </div>
+            <div id="drinks" class="menu-category" style="display: none;">
+                <h3>Drinks</h3>
+
+                <p class="food" onclick="toggleDescription('drinks-vietcoffee-desc')">Vietnamese Iced Coffee</p>
+                <div id="drinks-vietcoffee-desc" class="description" style="display: none;">
+                    <p>A traditional vietnamese coffee, created using coffee roasted mix with sweetened condensed milk.</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268004238104" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+
+                <p class="food" onclick="toggleDescription('drinks-milktea-desc')">Blended Milk Tea</p>
+                <div id="drinks-milktea-desc" class="description" style="display: none;">
+                    <p>Blended milk tea available flavors: Strawberry, Honeydew, Taro, Mango, or Coconut (with rainbow jelly, no boba).</p>
+                    <a href="https://www.grubhub.com/restaurant/what-a-pho-3212-northwest-ave-bellingham/7792520/menu-item/268004238096?menu-item-options=" target="_blank">
+                        <button class="order-btn">Order Now</button>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="allergy-disclaimer">
+            <p>Allergy Disclaimer: At What a Pho, we understand the seriousness of food allergies and strive to accommodate the dietary needs of our guests. While we do our best to manage the presence of allergens in our kitchen, <mark>however we cannot guarantee that our dishes are completely free from allergens. </mark> For the safety of our guests, we strongly encourage you to contact us directly at 360 933 4182 before ordering to discuss your specific dietary requirements. We are committed to doing our utmost to address your concerns and customize your dining experience accordingly.</p>        </div>
+    </section>
+    <footer>
+        <p>© [2024] What A Pho. All rights reserved.</p>
+    </footer>
+</body>
+</html>
